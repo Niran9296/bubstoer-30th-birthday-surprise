@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Our Story — A Film for Sam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0a0f1c;
+    --navy:#111a30;
+    --gold:#c6a15b;
+    --gold-soft:#e8d5a8;
+    --cream:#f3ede0;
+    --muted:#8c93a6;
+  }
+  *{box-sizing:border-box;}
+  html,body{height:100%;}
+  body{
+    margin:0;
+    min-height:100svh;
+    background:radial-gradient(ellipse at 50% 30%, #111a30 0%, #070a13 75%);
+    color:var(--cream);
+    font-family:'Jost',sans-serif;
+    font-weight:300;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:2rem 1.2rem calc(2rem + env(safe-area-inset-bottom,0px));
+    padding-top:calc(2rem + env(safe-area-inset-top,0px));
+    text-align:center;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:clamp(1.8rem,6vw,2.6rem);
+    color:var(--gold-soft);
+    margin:0 0 0.4rem;
+  }
+  p.sub{
+    color:var(--muted);
+    font-size:0.95rem;
+    margin:0 0 2rem;
+    letter-spacing:0.02em;
+  }
+  .frame{
+    width:100%;
+    max-width:900px;
+    border-radius:4px;
+    overflow:hidden;
+    border:1px solid rgba(198,161,91,0.28);
+    box-shadow:0 20px 60px rgba(0,0,0,0.5);
+    background:#000;
+  }
+  video{
+    width:100%;
+    display:block;
+    aspect-ratio:16/9;
+    background:#000;
+  }
+  .note{
+    margin-top:1.6rem;
+    font-size:0.8rem;
+    color:var(--muted);
+    max-width:32rem;
+    line-height:1.7;
+  }
+  .heart{color:#c9765a;}
+  ::selection{background:var(--gold); color:#111;}
+</style>
+</head>
+<body>
+  <h1>Our Story</h1>
+  <p class="sub">A little surprise for Sam &nbsp;<span class="heart">&#10084;</span></p>
+
+  <div class="frame">
+    <video controls playsinline preload="metadata" poster="assets/images/poster.jpg">
+      <source src="assets/video/our-story-film.mp4" type="video/mp4">
+      Your browser can't play this video — try opening it in Chrome or Safari.
+    </video>
+  </div>
+
+  <p class="note">Best watched with the sound on.</p>
+</body>
+</html>
